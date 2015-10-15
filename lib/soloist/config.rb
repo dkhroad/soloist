@@ -28,6 +28,8 @@ module Soloist
         file_cache_path "#{chef_cache_path}"
         cookbook_path #{cookbook_paths.inspect}
         json_attribs "#{node_json_path}"
+	http_proxy ENV['http_proxy'] || nil
+	https_proxy ENV['https_proxy'] || nil
       SOLO_RB
     end
 
